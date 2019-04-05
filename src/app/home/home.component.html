@@ -1,0 +1,33 @@
+<!--
+<mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-tile><canvas id="myChart"></canvas></mat-grid-tile>
+  <mat-grid-tile>okasd</mat-grid-tile>
+  <mat-grid-tile>asdasd</mat-grid-tile>
+  <mat-grid-tile>ssss</mat-grid-tile>
+</mat-grid-list> -->
+<html>
+<ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
+<br>
+<div fxFlexAlign="center" style="text-align: center;">
+  <img class="two" width="300" height="300" src="../assets/JustDriveFinally.png">
+  <div fxFlexAlign="right">
+    <button mat-button color="primary" (click)="logOut()">Sign Out</button>
+  </div>
+  <mat-card><h1>Just Drive has encouraged <b>{{hourText}} hours, {{minuteText}} minutes and {{secondText}} seconds</b> of safe driving!</h1></mat-card><br><br>
+</div>
+
+<mat-grid-list fxFlexAlign="center" [cols]="cols | async" rowHeight="1000px">
+  <mat-grid-tile fxFlexAlign="center" style="text-align: center;">
+    <canvas fxFlexFill #barChart ></canvas>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <!-- <canvas  #otBreakdown ></canvas> -->
+    <mat-card-content fxFlexAlign="center">
+      <canvas class="a" #otBreakdown ></canvas>
+      <canvas class="b" #ngBreakdown ></canvas>
+      <canvas class="b" #escapeBreakdown ></canvas>
+    </mat-card-content>
+  </mat-grid-tile>
+
+</mat-grid-list>
+</html>

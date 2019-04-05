@@ -1,0 +1,18 @@
+
+img.two {
+    height: 15%;
+    width: 15%;
+}
+
+html {
+  background-color: black;
+  font-family: 'Montserrat', sans-serif;
+}
+
+canvas.b {
+    vertical-align: baseline;
+}
+
+canvas.a {
+    vertical-align: text-top;
+}
